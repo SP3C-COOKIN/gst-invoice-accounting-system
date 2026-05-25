@@ -1,5 +1,5 @@
 async function loadExpenses() {
-    const response = await fetch("http://localhost:5000/expenses");
+    const response = await fetch("http://https://gst-invoice-accounting-system.onrender.com/expenses");
     const expenses = await response.json();
 
     const tableBody = document.getElementById("expenseBody")

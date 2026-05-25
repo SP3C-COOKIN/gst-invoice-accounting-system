@@ -51,7 +51,7 @@ form.addEventListener("submit", async function(e) {
         return false;
     }
 
-    const response = await fetch("http://localhost:5000/expenses", {
+    const response = await fetch("http://https://gst-invoice-accounting-system.onrender.com/expenses", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(expense)
