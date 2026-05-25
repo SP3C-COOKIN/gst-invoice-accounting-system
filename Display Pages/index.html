@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Billing</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <main class="invoice-container">
+    <section class="invoice-header">
+    <div>
+        <h1> Company Pvt. Ltd.</h1>
+        <p>Olympia, Central Ave, Hiranandani Gardens, Powai, Mumbai, Maharashtra - 400076</p>
+        <p>GSTIN: 22ABCDE1234F1Z5</p>
+        <p>PAN: ABCDE1234F</p>
+        <p>Contact: +91 XXXXX XXXXX</p>
+        <p>Email: burger@burger.com</p>
+        <p>Website: www.google.com</p>
+    </div>
+
+        <div class="logo">LOGO</div>
+    </section>
+
+
+    <section class="info-row">
+    <div>
+        <h3>Customer Details</h3>
+        <p>Client Name: <span id="clientName"></span></p>
+        <p>Company Name: <span id="companyName"></span></p>
+        <p>Address: <span id="address"></span></p>
+        <p>GSTIN (if applicable): <span id="gstin"></span></p>
+        <p>Contact: <span id="contact"></span></p>
+    </div>    
+    
+    <div class="invoice-details">
+        <h3>Invoice Details</h3>
+        <p>Invoice No.: <span id="invoiceNumber"></span></p>
+        <p>Invoice Date: <span id="invoiceDate"></span></p> 
+        <p>Due Date: <span id="dueDate"></span></p>
+    </div>
+    </section>
+
+
+
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th>Sr </th>
+                <th>Service Name</th>
+                <th>Description</th>
+                <th>Qty</th>
+                <th> Rate </th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td id="serviceName"></td>
+                <td id="description"></td>
+                <td id="qty"></td>
+                <td id="rate"></td>
+                <td id="amount"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <section class="bottom-row">
+        <div>
+            <h3>Tax Calculation</h3>
+            <p>Subtotal: <span id="subtotal"></span></p>
+            <p> <strong>Total Amount:</strong> <span id="totalAmount"></span></p>
+        </div>
+
+        <div>
+            <h3>Payment Details</h3>
+            <p> Bank Name: State Bank of India </p>
+            <p> Account No.: ACCT-XXXX-0000</p>
+            <p> IFSC Code: TEST0ABC123 </p>
+            <p>UPI ID: user123@bank</p>
+        </div>
+    </section>
+    
+    <section class="footer-row">
+        <p>We declare that this invoice shows the actual price of the services
+         described and that all particulars are true and correct.<p>
+
+        <div class="signature-box">
+            <p>Authorized Signature</p>
+            <p> Sign / Stamp </p>
+        </div>
+    </section> 
+
+    <button onclick="printInvoice()" class="no-print">Print Invoice</button>
+<script src="../Inject Data js/script.js"></script>
+</body>
+</html>

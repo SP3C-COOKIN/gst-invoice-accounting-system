@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/invoice.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <h1 id="invoice">INVOICE</h1>
+            <form class="form">
+                
+                <div class="field">
+                    <label>Client Name</label>
+                    <input type="text" required id="clientName">
+                </div>
+
+                <div class="field">
+                    <label>Company Name</label>
+                    <input type="text" required id="companyName">
+                </div>
+
+                <div class="field">
+                    <label>Address</label>
+                    <input type="text" required id="address">
+                </div>
+
+                <div class="field">
+                    <label>GSTIN (optional)</label>
+                    <input type="text" id="gstin" maxlength="15">
+                </div>
+
+                <div class="field">
+                    <label>Contact</label>
+                    <input type="text"
+                    required
+                    id="contact"
+                    maxlength="10"
+                    inputmode="numeric"
+                    oninput="this.value = this.value.replace(/\D/g, '')">
+                </div>
+
+                <div class="field">
+                    <label>Service</label>
+
+                    <select id="dropdownServices">
+                        <option value="" disabled selected>Select Service</option>
+                        <option value="Website Developement">Website Development</option>
+                        <option value="Mobile App Development">Mobile App Development</option>
+                        <option value="AI/ML Solutions">AI/ML Solutions</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="SEO Services">SEO Services</option>
+                        <option value="Video Editing">Video Editing</option>
+                        <option value="Graphic Designing">Graphic Designing</option>
+                        <option value="Data Annotation / AI Training">Data Annotation / AI Training</option>
+                        <option value="Cloud Deployment">Cloud Deployment</option>
+                        <option value="Maintenance & Support">Maintenance & Support</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Description</label>
+                    <input type="text" required id="description">
+                </div>
+
+                <div class="field">
+                    <label>Quantity</label>
+                    <input type="number" required id="quantity">
+                </div>
+
+                <div class="field">
+                    <label>Rate per hour</label>
+                    <input type="number" required id="rate">
+                </div>
+
+                <div class="field">
+                    <label>State Tax</label>
+
+                    <select id="stateGst">
+                        <option value="" disabled selected>Select State Tax</option>
+                        <option value="sameState">Same State</option>
+                        <option value="interState">Interstate</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Payment Mode</label>
+
+                    <select id="paymentMode">
+                        <option value="" disabled selected>Payment Mode</option>
+                        <option value="Cash">Cash</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Bank Transfer">Bank Transfer</option>
+                        <option value="Credit Card">Credit Card</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="button">Generate Invoice</button>
+        </form>
+</div>
+    <script src="../Send Data js/invoice.js"></script>
+</body>
+</html>

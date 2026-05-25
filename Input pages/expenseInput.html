@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Input</title>
+
+    <link rel="stylesheet" href="../css/expenseInput.css">
+</head>
+
+<body>
+    <div id="expense-container">
+        <h1 id="expense">EXPENSE ENTRY</h1>
+        <form id="expenseForm">
+
+            <div class="form">
+                <label>Date</label>
+                <input type="date" required id="date">
+            </div>
+
+            <div class="form">
+                <select id="expenseType">
+                    <option value="" disabled selected>Select Expense Type</option>
+                    <option value="Salary">Salary</option>
+                    <option value="Office Rent">Office Rent</option>
+                    <option value="Software Subscription">Software Subscription</option>
+                    <option value="Marketing Ads">Marketing Ads</option>
+                    <option value="Equipment Purchase">Equipment Purchase</option>
+                    <option value="Freelancers Payment">Freelancers Payment</option>
+                </select>
+            </div>
+
+            <div class="form">
+                <label>Description</label>
+                <input type="text" id="description">
+            </div>
+
+            <div class="form">
+                <label>Amount</label>
+                <input type="number" required id="amount">
+            </div>
+
+            <div class="form">
+                <label>Paid to</label>
+                <input type="text" required id="paidTo">
+            </div>
+
+            <div class="form">
+                <select id="paymentMode">
+                    <option value="" disabled selected>Select Payment Mode</option>
+                    <option value="Cash">Cash</option>
+                    <option value="UPI">UPI</option>
+                    <option value="Bank Transfer">Bank Transfer</option>
+                    <option value="Credit Card">Credit Card</option>
+                </select>
+            </div>
+
+                <button type="submit" id="expenseButton">
+                    Generate Expense Sheet
+                </button>
+            </div>
+
+        </form>
+    <script src="../Send Data js/expense.js"></script>
+
+</body>
+</html>
