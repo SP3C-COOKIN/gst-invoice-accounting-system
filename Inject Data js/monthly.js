@@ -26,8 +26,8 @@ document.getElementById("dashboardBtn").addEventListener("click", async function
 
 const selectedMonthName = monthNames[selectedMonth];
 
-    const invoiceResponse = await fetch("http://https://gst-invoice-accounting-system.onrender.com/invoices");
-    const expenseResponse = await fetch("http://https://gst-invoice-accounting-system.onrender.com/expenses");
+    const invoiceResponse = await fetch("https://gst-invoice-accounting-system.onrender.com/invoices");
+    const expenseResponse = await fetch("https://gst-invoice-accounting-system.onrender.com/expenses");
 
     const invoices = await invoiceResponse.json();
     const expenses = await expenseResponse.json();

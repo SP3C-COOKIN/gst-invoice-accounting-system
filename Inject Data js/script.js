@@ -3,7 +3,7 @@ async function loadInvoice() {
 const params = new URLSearchParams(window.location.search); // we check for some parameters and stuff
 const id = params.get("id"); // we get the id 
 
-const response = await fetch(`http://https://gst-invoice-accounting-system.onrender.com/invoices/${id}`);
+const response = await fetch(`https://gst-invoice-accounting-system.onrender.com/invoices/${id}`);
 
 const data = await response.json();
 

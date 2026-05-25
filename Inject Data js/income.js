@@ -8,7 +8,7 @@ if (incomeButton) {
 
 async function loadIncomeSheet() {
 
-    const response = await fetch("http://https://gst-invoice-accounting-system.onrender.com/invoices");
+    const response = await fetch("https://gst-invoice-accounting-system.onrender.com/invoices");
 
     if (!response.ok) {
         const errorData = await response.json();

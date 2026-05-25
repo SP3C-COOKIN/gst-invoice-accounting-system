@@ -156,7 +156,7 @@ if (!validateInvoice(data)) {
     return false;
 }
 
-const response = await fetch("http://https://gst-invoice-accounting-system.onrender.com/invoices", {
+const response = await fetch("https://gst-invoice-accounting-system.onrender.com/invoices", {
     method: "POST",
     headers: { "Content-Type": "application/json"},
     body: JSON.stringify(data),
