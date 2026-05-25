@@ -8,12 +8,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const path = require("path");
+
+app.use(express.static(path.join(__dirname, "../")));
+
 const PORT = process.env.PORT || 5000;
     
-const path = require("path");
-app.use(express.static(path.join(__dirname, "..")));
-
-
 const puppeteer = require("puppeteer");
 
 async function generateInvoicePDF(savedInvoice) {   
@@ -213,6 +213,9 @@ app.delete("/clear-invoices", async (req, res) => {
     }
 });
 
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../home.html"));
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on Port ${PORT}`)
